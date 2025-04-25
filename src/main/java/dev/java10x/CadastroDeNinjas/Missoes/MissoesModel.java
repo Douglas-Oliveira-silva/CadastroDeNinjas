@@ -20,6 +20,8 @@ public class MissoesModel {
 
     private String nome;
 
+    private String dificuldade;
+
     private String Rank;
 
     // OneToMany: uma missão pode ter vários ninjas
