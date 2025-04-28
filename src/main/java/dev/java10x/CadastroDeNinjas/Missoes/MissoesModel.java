@@ -21,6 +21,9 @@ public class MissoesModel {
     @Column(name="id")
     private Long id;
 
+    @Column (name = "Rank")
+    private String Rank;
+
     @Column(name = "nome")
     private String nome;
 
