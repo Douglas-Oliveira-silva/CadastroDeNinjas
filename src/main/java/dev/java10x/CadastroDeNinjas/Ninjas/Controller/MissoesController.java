@@ -29,7 +29,7 @@ public class MissoesController {
     // DELETE - requisição para deletar as missoes
     @DeleteMapping("/deletar")
         public String deletarMissao(){
-                return "Missao deletada com sucesso"
+                return "Missao deletada com sucesso";
     }
 
 }

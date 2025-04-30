@@ -17,13 +17,13 @@ public class NinjaController {
         return "Ninja Criado";
     }
     // Mostrar todos os ninjas(CREATE)
-    @GetMapping("/todos")
+    @GetMapping("/listar")
     public String mostrarTodosOsNinjas(){
         return "Mostrar Ninja";
     }
 
     // Mostrar ninjas por ID (READ)
-    @GetMapping("/todosID")
+    @GetMapping("/listarID")
     public String mostrarTodosOsNinjasPorId(){
         return "Mostrar Ninja por id";
     }
