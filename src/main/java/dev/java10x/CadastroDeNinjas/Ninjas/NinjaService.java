@@ -13,9 +13,12 @@ public class NinjaService {
 
 
     private NinjaRepository ninjaRepository;
+    private NinjaMapper ninjaMapper;
 
-    public NinjaService(NinjaRepository ninjaRepository) {
+
+    public NinjaService(NinjaRepository ninjaRepository, NinjaMapper ninjaMapper) {
         this.ninjaRepository = ninjaRepository;
+        this.ninjaMapper = ninjaMapper;
     }
 
     // Listar todos os meus ninjas
@@ -29,10 +32,11 @@ public class NinjaService {
         return ninjaPorID.orElse(null);
     }
 
-    //criar um novo ninja
-
-    public NinjaModel criarNinja(NinjaModel ninja){
-        return ninjaRepository.save(ninja);
+    //criar um novo ninja (DTO)
+    public NinjaDTO criarNinja(NinjaDTO ninjaDTO) {
+       NinjaModel ninja = ninjaMapper.map(ninjaDTO);
+      ninja =  ninjaRepository.save(ninja);
+        return ninjaMapper.map(ninja);
     }
 
     //deletar ninja - tem que ser um metodo void
